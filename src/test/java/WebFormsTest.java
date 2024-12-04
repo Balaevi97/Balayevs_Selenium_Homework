@@ -8,7 +8,7 @@ import java.time.Duration;
 
 public class WebFormsTest {
     @Test
-    public void WebFormsTest () throws InterruptedException {
+    public void WebFormsTest ()  {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -19,7 +19,7 @@ public class WebFormsTest {
         WebElement dropDownMenu = driver.findElement(By.xpath("//select [@id = 'dropdowm-menu-1']"));
         String getAttribute = dropDownMenu.getAttribute("value");
         if (getAttribute.equals("python")) {
-            System.out.println("Here We Go! Test Passed");
+            System.out.println("Here We Go! Drop Down Test Passed");
         } else {
             System.out.println("Try Again");
         }
@@ -28,13 +28,23 @@ public class WebFormsTest {
         driver.findElement(By.xpath("//*[@id = 'checkboxes']//input[@value = 'option-2']")).click();
         driver.findElement(By.xpath("//*[@id = 'checkboxes']//input[@value = 'option-4']")).click();
 
+        boolean option1 = driver.findElement(By.xpath("//*[@id = 'checkboxes']//input[@value = 'option-1']")).isSelected();
+        boolean option2 = driver.findElement(By.xpath("//*[@id = 'checkboxes']//input[@value = 'option-2']")).isSelected();
+        boolean option4 = driver.findElement(By.xpath("//*[@id = 'checkboxes']//input[@value = 'option-4']")).isSelected();
+
+        if (option1 && option2 && option4) {
+            System.out.println("Here We Go! All Checkbox Is Selected, Test Passed");
+        } else {
+            System.out.println("Test Failed");
+        }
+
 
         driver.findElement(By.xpath("//*//input[@value = 'yellow']")).click();
         WebElement radioButton = driver.findElement(
                 By.xpath("//*//form [@id = 'radio-buttons']/input [@value = 'yellow']"));
 
         if (radioButton.isSelected()) {
-            System.out.println("Here We Go! Test Passed");
+            System.out.println("Here We Go! Radio Button Test Passed");
         } else {
             System.out.println("Try Again");
         }
@@ -55,10 +65,10 @@ public class WebFormsTest {
         WebElement isDisabled1 = driver.findElement(
                 By.xpath("//*//select[@id= 'fruit-selects']/option [@value = 'orange' and @disabled= 'disabled']"));
         if (isDisabled1.isDisplayed()) {
-            System.out.println("Here We Go! Test Passed");
+            System.out.println("Here We Go! Selected & Disabled Test Passed");
         } else {
             System.out.println("Try Again");
         }
-        driver.close();
+    //    driver.close();
     }
 }
