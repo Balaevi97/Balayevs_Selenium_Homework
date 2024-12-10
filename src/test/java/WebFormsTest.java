@@ -20,6 +20,7 @@ public class WebFormsTest {
         WebElement dropDownMenu = driver.findElement(By.xpath("//select [@id = 'dropdowm-menu-1']"));
         String getAttribute = dropDownMenu.getAttribute("value");
         Assert.assertEquals("python",getAttribute);
+
 //        if (getAttribute.equals("python")) {
 //            System.out.println("Here We Go! Drop Down Test Passed");
 //        } else {
@@ -36,12 +37,12 @@ public class WebFormsTest {
         Assert.assertTrue(option1);
         Assert.assertTrue(option2);
         Assert.assertTrue(option4);
+
 //        if (option1 && option2 && option4) {
 //            System.out.println("Here We Go! All Checkbox Is Selected, Test Passed");
 //        } else {
 //            System.out.println("Test Failed");
 //        }
-
 
         driver.findElement(By.xpath("//*//input[@value = 'yellow']")).click();
         WebElement radioButton = driver.findElement(
@@ -61,6 +62,7 @@ public class WebFormsTest {
 //        WebElement  orange= driver.findElement(
 //                By.xpath("//*//select[@id= 'fruit-selects']/option[@value = 'orange']"));
 //        String isDisabled = orange.getAttribute("disabled");
+//        Assert.assertEquals("true", isDisabled);
 //        if (isDisabled != null) {
 //            System.out.println("Here We Go! Test Passed");
 //        } else {
@@ -72,7 +74,6 @@ public class WebFormsTest {
                 By.xpath("//*//select[@id= 'fruit-selects']/option [@value = 'orange' and @disabled= 'disabled']"));
         String disabled = isDisabled1.getAttribute("disabled");
         Assert.assertEquals("true", disabled);
-
 
 //        if (isDisabled1.isDisplayed()) {
 //            System.out.println("Here We Go! Selected & Disabled Test Passed");

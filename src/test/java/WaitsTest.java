@@ -11,7 +11,6 @@ import java.time.Duration;
 public class WaitsTest {
     @Test
     public void waitProgressBar () {
-     //   SoftAssert softAssert = new SoftAssert();
 
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -27,6 +26,6 @@ public class WaitsTest {
 //        } else {
 //            System.out.println("Try Again");
 //        }
-//        driver.close();
+        driver.close();
     }
 }
