@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="First testNG test Suits" parallel="none" thread-count="1">
+    <test name="CommandsTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="CommandsTest"/>
+        </classes>
+    </test>
+
+    <test name="ActionRobot">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ActionRobot"/>
+        </classes>
+    </test>
+
+    <test name="PageScroll">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="PageScroll"/>
+        </classes>
+    </test>
+
+    <test name="WaitsTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="WaitsTest"/>
+        </classes>
+    </test>
+
+    <test name="WebFormsTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="WebFormsTest"/>
+        </classes>
+    </test>
+</suite>
