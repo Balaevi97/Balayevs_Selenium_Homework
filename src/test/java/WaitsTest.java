@@ -1,31 +1,16 @@
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.asserts.SoftAssert;
 
-import java.time.Duration;
+import SetUp.SetUp;
+import Steps.WaitsTestSteps;
+import org.testng.annotations.Test;
 
-public class WaitsTest {
-    @Test
+
+public class WaitsTest extends SetUp {
+    WaitsTestSteps waitsTestSteps = new WaitsTestSteps(driver);
+    @Test (priority = 1)
     public void waitProgressBar () {
 
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("https://demoqa.com/progress-bar");
-        driver.findElement(By.xpath("//button [@id = 'startStopButton']")).click();
-        WebElement hundredPercentage = driver.findElement(By.xpath("//div [@aria-valuenow= '100']"));
-        String volumeValue = hundredPercentage.getAttribute("aria-valuenow");
-        Assert.assertEquals("100", volumeValue);
-
-//        if (hundredPercentage.isDisplayed()) {
-//            System.out.println("Here We Go! Test Passed");
-//        } else {
-//            System.out.println("Try Again");
-//        }
-        driver.close();
+        waitsTestSteps.openPage();
+        waitsTestSteps.startStopButton();
+        waitsTestSteps.AssertVolumeValue("100");
     }
 }
