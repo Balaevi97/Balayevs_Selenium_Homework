@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="First testNG test Suits" parallel="none" thread-count="1">
+    <test name="TestsForSelenium.CommandsTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestsForSelenIDE.ActionRobotSelenIDE"/>
+        </classes>
+    </test>
+
+</suite>
