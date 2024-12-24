@@ -1,5 +1,5 @@
 package Steps;
-import Elements.WaitsTestElements;
+import ElementsForSelenium.WaitsTestElements;
 import URL.URL;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;

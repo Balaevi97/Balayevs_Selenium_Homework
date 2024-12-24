@@ -22,7 +22,6 @@ public class SetUp {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
             js = (JavascriptExecutor) driver;
             actions = new Actions(driver);
-
         }
     }
         @AfterTest

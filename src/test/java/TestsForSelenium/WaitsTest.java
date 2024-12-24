@@ -1,3 +1,4 @@
+package TestsForSelenium;
 
 import SetUp.SetUp;
 import Steps.WaitsTestSteps;

@@ -1,6 +1,5 @@
-package Elements;
+package ElementsForSelenium;
 
-import SetUp.SetUp;
 import org.openqa.selenium.By;
 
 public class PageScrollElements {

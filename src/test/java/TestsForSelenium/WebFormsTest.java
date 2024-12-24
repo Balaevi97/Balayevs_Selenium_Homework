@@ -1,7 +1,8 @@
+package TestsForSelenium;
+
 import SetUp.SetUp;
 import Steps.WebFormsSteps;
 import org.testng.annotations.Test;
-
 
 public class WebFormsTest extends SetUp {
     WebFormsSteps webFormsSteps = new WebFormsSteps(driver);

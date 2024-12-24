@@ -1,5 +1,5 @@
 package Steps;
-import Elements.CommandsTestElements;
+import ElementsForSelenium.CommandsTestElements;
 import URL.URL;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

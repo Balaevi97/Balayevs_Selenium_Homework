@@ -1,6 +1,6 @@
 package Steps;
 
-import Elements.WebFormsElements;
+import ElementsForSelenium.WebFormsElements;
 import URL.URL;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,7 +38,7 @@ public class WebFormsSteps extends WebFormsElements {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void checkboxe () {
-        List<WebElement> checkboxLocator = driver.findElements(checkboxe);
+        List<WebElement> checkboxLocator = driver.findElements(checkbox);
         for (WebElement checkboxes : checkboxLocator) {
             if (checkboxes.getAttribute("checked") == null) {
                 checkboxes.click();

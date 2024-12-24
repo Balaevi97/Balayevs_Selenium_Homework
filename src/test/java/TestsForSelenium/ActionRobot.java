@@ -1,3 +1,5 @@
+package TestsForSelenium;
+
 import SetUp.SetUp;
 import Steps.ActionRobot.ActionSteps;
 import Steps.ActionRobot.RobotSteps;

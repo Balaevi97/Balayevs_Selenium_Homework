@@ -1,3 +1,5 @@
+package TestsForSelenium;
+
 import SetUp.SetUp;
 import Steps.CommandsTestSteps;
 import org.testng.annotations.Test;

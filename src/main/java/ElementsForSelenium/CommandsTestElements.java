@@ -1,4 +1,4 @@
-package Elements;
+package ElementsForSelenium;
 
 import org.openqa.selenium.By;
 

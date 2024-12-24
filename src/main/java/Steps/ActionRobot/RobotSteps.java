@@ -1,6 +1,6 @@
 package Steps.ActionRobot;
 
-import Elements.ActionRobotElements;
+import ElementsForSelenium.ActionRobotElements;
 import URL.URL;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

@@ -1,3 +1,5 @@
+package TestsForSelenium;
+
 import SetUp.SetUp;
 import Steps.PageScrollSteps;
 import org.testng.annotations.Test;

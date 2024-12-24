@@ -1,8 +1,6 @@
-package Elements;
+package ElementsForSelenium;
 
-import SetUp.SetUp;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class WaitsTestElements {
 

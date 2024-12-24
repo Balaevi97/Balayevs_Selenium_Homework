@@ -1,17 +1,18 @@
-package Steps;
+package StepsSelenIDE;
 
-import ElementsForSelenium.PageScrollElements;
+import ElementsForSelenIDE.PageScrollSelenIDEElements;
 import URL.URL;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class PageScrollSteps extends  PageScrollElements {
+public class PageScrollStepsSelenIDE extends PageScrollSelenIDEElements {
     WebDriver driver;
     JavascriptExecutor js;
     URL url = new URL();
-    public PageScrollSteps (WebDriver driver, JavascriptExecutor js) {
+
+    public PageScrollStepsSelenIDE (WebDriver driver, JavascriptExecutor js) {
         this.driver = driver;
         this.js = js;
     }
@@ -38,6 +39,7 @@ public class PageScrollSteps extends  PageScrollElements {
     }
 
     public void firstAssert () {
+
         Assert.assertNotSame(firstScrollLocation(), getTopScrollBar());
     }
 
@@ -46,6 +48,7 @@ public class PageScrollSteps extends  PageScrollElements {
     }
 
     public void secondAssert () {
+
         Assert.assertNotSame(secondScrollLocation(), getTopScrollBar());
         Assert.assertNotSame(secondScrollLocation(), firstScrollLocation());
     }
@@ -61,12 +64,11 @@ public class PageScrollSteps extends  PageScrollElements {
     }
 
     public WebElement getSubmitButton () {
-        return driver.findElement(submitButton);
+        return submitButton;
 
     }
 
     public void scrollToSubmitButton () {
-
         js.executeScript("arguments[0].scrollIntoView(true);", getSubmitButton());
     }
 
@@ -80,11 +82,10 @@ public class PageScrollSteps extends  PageScrollElements {
     }
 
     public  WebElement scrollToBottomElement () {
-        return driver.findElement(bottomElement);
+        return bottomElement;
     }
 
     public void bottomElementAsset () {
         Assert.assertTrue(scrollToBottomElement().isDisplayed());
-
     }
 }

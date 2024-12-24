@@ -1,7 +1,6 @@
-package Elements;
+package ElementsForSelenium;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.BeforeTest;
 
 public class ActionRobotElements {
 
