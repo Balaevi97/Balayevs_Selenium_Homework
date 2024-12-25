@@ -2,86 +2,70 @@ package StepsSelenIDE;
 
 import ElementsForSelenIDE.CommandsTestSelenIDEElements;
 import URL.URL;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import static com.codeborne.selenide.Condition.attribute;
-import static com.codeborne.selenide.Condition.not;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.open;
 
 
 public class CommandsTestStepsSelenIDE extends CommandsTestSelenIDEElements {
-    WebDriver driver;
     URL url = new URL();
-    public CommandsTestStepsSelenIDE (WebDriver driver) {
-        this.driver = driver;
+
+    public CommandsTestStepsSelenIDE openPage() {
+        open(url.dynamic_controls);
+        return this;
     }
 
-    public void openPage() {
-        driver.get(url.dynamic_controls);
-    }
-
-    public void enableButton () {
+    public CommandsTestStepsSelenIDE enableButton () {
         enableButton.click();
+        return this;
     }
 
-    public void textField (String text) {
+    public CommandsTestStepsSelenIDE textField (String text) {
         itemGetAttribute.sendKeys(text);
+        return this;
     }
 
-    public void itemGetAttribute () {
-         itemGetAttribute.shouldHave(attribute("disabled"), not(null));
+    public CommandsTestStepsSelenIDE itemGetAttribute () {
+         itemGetAttribute.shouldNotHave(attribute("disabled"));
+        return this;
     }
 
-//    public void enableItemArray () {
-//        Assert.assertNull(itemGetAttribute() );
-//    }
-    public void   getButtonTextEnable () {
+    public CommandsTestStepsSelenIDE   getButtonTextEnable () {
         // buttonEnable.getText();
-        buttonEnable.getText().equals("Disable");
+        buttonEnable.shouldHave(text("Disable"));
+        return this;
     }
 
-//    public void buttonNameEnable () {
-//        Assert.assertEquals(getButtonTextEnable(), "Disable");
-//    }
-
-    public void getMessageTextEnabled () {
-         messageTextEnabled.getText();
-        messageTextEnabled.getText().equals("It's enabled!");
+    public CommandsTestStepsSelenIDE getMessageTextEnabled () {
+         messageTextEnabled.shouldHave(text("It's enabled!"));
+        return this;
     }
 
-//    public void messageTextEnabledAssert () {
-//        Assert.assertEquals(getMessageTextEnabled(), "It's enabled!");
-//    }
-
-    public void clearTextbox () {
+    public CommandsTestStepsSelenIDE clearTextbox () {
         itemGetAttribute.clear();
+        return this;
     }
 
-    public void disableButton () {
+    public CommandsTestStepsSelenIDE disableButton () {
         disableButton.click();
+        return this;
     }
 
-//    public void disableItemArray () {
-//        Assert.assertEquals("true", itemGetAttribute());
-//    }
-
-    public void   buttonDisable () {
-        // buttonDisable.getText();
-        buttonDisable.getText().equals("Enable");
+    public CommandsTestStepsSelenIDE   buttonDisable () {
+        buttonDisable.shouldHave(text("Enable"));
+        return this;
     }
 
-//    public void buttonDisableAssert () {
-//        Assert.assertEquals(buttonDisable(), "Enable");
-//    }
-
-    public void getMessageTextDisabled () {
-        //return messageTextDisabled.getText();
-        messageTextDisabled.getText().equals("It's disabled!");
+    public CommandsTestStepsSelenIDE getMessageTextDisabled () {
+        messageTextDisabled.shouldHave(text("It's disabled!"));
+        return this;
     }
 
-//    public void messageTextDisabledAssert () {
-//        Assert.assertEquals(getMessageTextDisabled(), "It's disabled!");
-//    }
+    public CommandsTestStepsSelenIDE moveTo () {
+        open(url.moveTo);
+        return this;
+    }
 
     public int columnALocation () {
         return columnA.getLocation().y;
@@ -91,7 +75,8 @@ public class CommandsTestStepsSelenIDE extends CommandsTestSelenIDEElements {
         return columnB.getLocation().y;
     }
 
-    public void columnAssert () {
+    public CommandsTestStepsSelenIDE columnAssert () {
         Assert.assertEquals(columnALocation(),columnBLocation());
+        return this;
     }
 }

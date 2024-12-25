@@ -9,4 +9,6 @@ public class URL {
     public String herokuApp = "https://the-internet.herokuapp.com/tables";
     public String hover = "https://demoqa.com/tool-tips";
     public String google = "https://www.google.com";
+    public String tableLink = "https://the-internet.herokuapp.com/tables";
+    public String moveTo = "http://the-internet.herokuapp.com/drag_and_drop";
 }

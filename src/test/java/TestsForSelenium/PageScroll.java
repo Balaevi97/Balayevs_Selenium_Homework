@@ -16,10 +16,10 @@ public class PageScroll extends SetUp {
         pageScrollSteps.openPage();
         Thread.sleep(1000);
         pageScrollSteps.getTopScrollBar();
-        pageScrollSteps.ScrollDown();
+        pageScrollSteps.scrollDown();
         pageScrollSteps.firstAssert();
         Thread.sleep(1000);
-        pageScrollSteps.ScrollDown();
+        pageScrollSteps.scrollDown();
         pageScrollSteps.secondAssert();
         Thread.sleep(1000);
         pageScrollSteps.thirdAssert();

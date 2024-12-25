@@ -29,7 +29,7 @@ public class PageScrollSteps extends  PageScrollElements {
         return    js.executeScript("return document.documentElement.scrollTop");
     }
 
-    public void ScrollDown () {
+    public void scrollDown () {
         js.executeScript("window.scrollBy(0, 500)");
     }
 
