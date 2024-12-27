@@ -11,4 +11,7 @@ public class URL {
     public String google = "https://www.google.com";
     public String tableLink = "https://the-internet.herokuapp.com/tables";
     public String moveTo = "http://the-internet.herokuapp.com/drag_and_drop";
+    public String dynamicContent = "https://the-internet.herokuapp.com/";
+    public String toDoApplication = "https://webdriveruniversity.com/";
+    public String moveToToDo = "https://webdriveruniversity.com/To-Do-List/index.html";
 }
