@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="First testNG test Suits" parallel="false" thread-count="1">
+    <test name="TestsForSelenium.CommandsTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestsForSelenium.CommandsTest"/>
+        </classes>
+    </test>
+
+    <test name="TestsForSelenium.ActionRobot" parallel="false" >
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestsForSelenium.ActionRobot"/>
+        </classes>
+    </test>
+
+    <test name="TestsForSelenium.PageScroll">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestsForSelenium.PageScroll"/>
+        </classes>
+    </test>
+
+    <test name="TestsForSelenium.WaitsTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestsForSelenium.WaitsTest"/>
+        </classes>
+    </test>
+
+    <test name="TestsForSelenium.WebFormsTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestsForSelenium.WebFormsTest"/>
+        </classes>
+    </test>
+
+</suite>
